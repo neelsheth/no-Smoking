@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="NoSmoke.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Smoking</title>
+
+</head>
+
+<body style="color:rgb(246, 241, 241)">
+    <div class="content">
+
+
+        <section>
+            <img src="1.jpg" alt="No smoke" height="250" width="1000" class="center">
+        </section>
+        <hr>
+
+        <form id="calculator">
+            <h1>Smoking Calculator:</h1>
+            <ul>
+                <li>
+                    <h2>How many cigarettes do you smoke in a day?....... <input type="text" name="a"> </h2>
+                </li>
+                <li>
+                    <h2>How much do you pay for a pack of cigarettes?... <input type="text" name="b"> Rs</h2>
+                </li>
+                <li>
+                    <h2> How many cigarettes are in a pack? ...................... <input type="text" name="c"></h2>
+                </li>
+            </ul>
+        </form>
+        <button onclick="adder()"> Calculate </button><br><br>
+
+        <hr>
+        <h1>Result :-</h1>
+        <p>
+        <h2>In one year you can save <b id="y"> _____!!</b> !!</h2>
+        </p>
+
+        <table>
+            <tr>
+                <th>Duration</th>
+                <th>Saving</th>
+            </tr>
+            <tr>
+                <td> 1 Day</td>
+                <td id="d"> ___ Rs </td>
+            </tr>
+            <tr>
+                <td> 1 Month</td>
+                <td id="m"> ___ Rs </td>
+            </tr>
+            <tr>
+                <td> 1 Year</td>
+                <td id="y2"> ___ Rs </td>
+            </tr>
+            <tr>
+                <td> 10 Year</td>
+                <td id="tY"> ___ Rs </td>
+            </tr>
+        </table>
+        <br>
+        <p>This is Direct Money Saving. there is also indirect Money Saving like,</p>
+
+        <h2>Health Insurance :-</h2>
+        <p>The cost of smoking cigarettes is not only a daily financial cost, it can lead to higher costs for health and
+            life insurance, high health care costs due to smoking-related diseases, and exposes your loved ones to the
+            harmful chemicals in cigarette smoke that have negative impacts on their health.</p>
+        <div class="main">
+            <div class="box">
+                <img src="no smoke insurance.jpg" alt="noSmoke" width="100%">
+            </div>
+            <div class="box">
+                <img src="smoke insurance.jpg" alt="smoke" width="100%">
+            </div>
+        </div>
+
+
+        <br>
+        <hr>
+        <div class="effect" style="align-items:center">
+            <h1>Effects of Smocking on health :-</h1>
+            <p>Tobacco has been around for centuries, but what we know about the health damage from smoking is much
+                newer. For example, smokers tend to die more than 10 years earlier than people who don’t smoke. You can
+                improve your health by choosing to quit smoking.</p>
+            <img src="4.jpg" alt="smoking effect" height="1800" width="1015">
+        </div>
+    </div>
+
+    <script>
+
+
+        function adder() {
+            var a = parseInt(document.getElementById("calculator").elements["a"].value);
+            var b = parseInt(document.getElementById("calculator").elements["b"].value);
+            var c = parseInt(document.getElementById("calculator").elements["c"].value);
+
+            var daily = a * (b / c);
+            var monthly = 28 * daily;
+            var yearly = 365 * daily;
+            var tenYearly = 10 * yearly;
+
+            document.getElementById("d").innerHTML = daily;
+            document.getElementById("m").innerHTML = monthly;
+            document.getElementById("y").innerHTML = yearly;
+            document.getElementById("y2").innerHTML = yearly;
+            document.getElementById("tY").innerHTML = tenYearly;
+        }
+    </script>
+
+
+</body>
+
+</html>
